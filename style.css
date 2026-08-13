@@ -10,10 +10,10 @@
 }
 
 :root{
-    --bg-color:#fff;
+    --bg-color:linear-gradient(135deg,#0D47A1,#2196F3,#90CAF9,#E3F2FD );
     --snd-bg-color:#d5fdf9;
     --text-color: #000;
-    --main-color:#007f73;
+    --main-color:#0d48a116;
 }
 
 html{
@@ -76,3 +76,104 @@ section{
     cursor: pointer;
     display: none;
   }
+
+  /* Home Section Code */
+
+  .home{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-img img{
+    object-fit: cover;
+    height: 40vh;
+    width: 20vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+    animation: floatImage 4s ease-in-out infinite;
+    transition: 0.4s ease;
+  }
+  
+  .home-img img:hover {
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 35px var(--main-color),
+                0 0 45px var(--main-color)
+  }
+
+  @keyframes floatImage {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+  }
+
+  .home-content{
+    margin-left: 5rem;
+  }
+
+  .home-content h3{
+    font-size: 3.7rem;
+    font-weight: 700;
+  }
+
+  .home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+  }
+  span{
+  color: #04364A;
+}
+  span:hover{
+  color:#8A244B;
+}
+  
+.home-content h1{
+    font-size: 6rem;
+    /* font-weight: 700; */
+    line-height: 1.3;
+}  
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    background: transparent;
+    border: 0.2rem solid #04364A;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #04364A;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+}
+
+.social-media a:hover{
+    transform: scale(1.2) translateY(-10px);
+    background-color: #04364A;
+    color: var(--bg-color);
+    box-shadow: 0 0 25px #04364A;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background:var(--main-color) ;
+    border-radius: 4rem;
+    box-shadow: none;
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover{
+    box-shadow: 0 0 1.6rem #04364A;
+}
